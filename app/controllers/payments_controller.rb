@@ -56,6 +56,8 @@ class PaymentsController < ApplicationController
     @msg = 'Payment failed for Hasn not verified...'
 
     @msg = 'Transaction Successful and Hash Verified...' if @status === 'success' && @hash === @CalcHash
+
+    redirect_to(payments_path, msg: @msg)
   end
   # end of response
 end
