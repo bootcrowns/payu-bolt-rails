@@ -36,7 +36,6 @@ class PaymentsController < ApplicationController
 
   # to be called by PayU to post response
   def callback
-    byebug
     @key = params[:key]
     @salt = params[:salt]
     @txnid = params[:txnid]
